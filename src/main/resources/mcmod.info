@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "com.fizzixnerd.stands",
+    "name": "Stands",
+    "description": "A JJBA-inspired mod.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["fizzixnerd"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
