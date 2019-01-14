@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 object RegisterBlocks {
   @SubscribeEvent
   def registerBlocks(event: RegistryEvent.Register[Block]): Unit = {
-    logger.info("Registering blocks")
+    logger.debug("Registering block")
     event.getRegistry.register(BlockCool)
   }
 }

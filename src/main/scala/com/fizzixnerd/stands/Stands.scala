@@ -24,6 +24,5 @@ object Stands {
 
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = {
-    logger.info(s"Dirt Block is ${Blocks.DIRT.getRegistryName}")
   }
 }

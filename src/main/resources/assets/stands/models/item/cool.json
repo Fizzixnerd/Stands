@@ -1,5 +1,5 @@
 {
-  "parent": "block/lapis_block",
+  "parent": "stands:block/cool",
   "display": {
     "thirdperson": {
       "rotation": [10, -45, 170],

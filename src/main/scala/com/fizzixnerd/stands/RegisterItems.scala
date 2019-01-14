@@ -12,20 +12,24 @@ import net.minecraftforge.fml.common.registry.GameRegistry
 
 @Mod.EventBusSubscriber
 object RegisterItems {
+  val ITEMS: Array[Item] = Array(BlockCool.itemBlock, ItemWheatAndSteel)
+
   @SubscribeEvent
   def registerItems(event: RegistryEvent.Register[Item]): Unit = {
-    logger.info("Registering item blocks")
-    event.getRegistry.register(BlockCool.itemBlock)
+    logger.debug("Registering items")
+    event.getRegistry.registerAll(ITEMS: _*)
   }
 
   @SubscribeEvent
   def registerModels(event: ModelRegistryEvent): Unit = {
-    logger.info("Registering item models.")
-    val coolItem = GameRegistry.findRegistry(classOf[Item]).getValue(BlockCool.itemBlock.getRegistryName)
-    ModelLoader.setCustomModelResourceLocation(
-      coolItem,
-      0,
-      new ModelResourceLocation(BlockCool.itemBlock.getRegistryName, "normal")
-    )
+    logger.debug("Registering item models.")
+    ITEMS.foreach((item: Item) => {
+      val registeredItem = GameRegistry.findRegistry(classOf[Item]).getValue(item.getRegistryName)
+      ModelLoader.setCustomModelResourceLocation(
+        registeredItem,
+        0,
+        new ModelResourceLocation(registeredItem.getRegistryName, "normal")
+      )
+    })
   }
 }
