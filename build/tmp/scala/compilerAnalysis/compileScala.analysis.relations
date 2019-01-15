@@ -1,48 +1,42 @@
 products:
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\BlockCool$.class
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\BlockCool.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\ItemWheatAndSteel$.class
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\ClientProxy$$anonfun$registerModels$1.class
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\ClientProxy.class
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\ItemWheatAndSteel.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\RegisterBlocks$.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\RegisterBlocks.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\RegisterItems$$anonfun$registerModels$1.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\RegisterItems$.class
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\RegisterItems.class
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\Proxy.class
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ServerProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\ServerProxy.class
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\Stands$.class
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\Desktop\Stands\Stands\build\classes\main\com\fizzixnerd\stands\Stands.class
 binary dependencies:
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala -> C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ServerProxy.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2807\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2807.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
 source dependencies:
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ServerProxy.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala
 external dependencies:
 class names:
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala -> com.fizzixnerd.stands.BlockCool
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\BlockCool.scala -> com.fizzixnerd.stands.BlockCool$
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> com.fizzixnerd.stands.ClientProxy
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ClientProxy.scala -> com.fizzixnerd.stands.ClientProxy$$anonfun$registerModels$1
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> com.fizzixnerd.stands.ItemWheatAndSteel
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ItemWheatAndSteel.scala -> com.fizzixnerd.stands.ItemWheatAndSteel$
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> com.fizzixnerd.stands.RegisterBlocks
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterBlocks.scala -> com.fizzixnerd.stands.RegisterBlocks$
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> com.fizzixnerd.stands.RegisterItems
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> com.fizzixnerd.stands.RegisterItems$
-   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\RegisterItems.scala -> com.fizzixnerd.stands.RegisterItems$$anonfun$registerModels$1
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Proxy.scala -> com.fizzixnerd.stands.Proxy
+   C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\ServerProxy.scala -> com.fizzixnerd.stands.ServerProxy
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> com.fizzixnerd.stands.Stands
    C:\Users\Matt\Desktop\Stands\Stands\src\main\scala\com\fizzixnerd\stands\Stands.scala -> com.fizzixnerd.stands.Stands$

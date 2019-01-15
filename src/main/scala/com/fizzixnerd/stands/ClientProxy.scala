@@ -1,29 +1,26 @@
 package com.fizzixnerd.stands
 
-import com.fizzixnerd.stands.Stands.logger
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.item.Item
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.client.model.ModelLoader
-import net.minecraftforge.event.RegistryEvent
-import net.minecraftforge.fml.common.Mod
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.registry.GameRegistry
+import net.minecraftforge.fml.relauncher.Side
 
-@Mod.EventBusSubscriber
-object RegisterItems {
-  val ITEMS: Array[Item] = Array(BlockCool.itemBlock, ItemWheatAndSteel)
-
-  @SubscribeEvent
-  def registerItems(event: RegistryEvent.Register[Item]): Unit = {
-    logger.debug("Registering items")
-    event.getRegistry.registerAll(ITEMS: _*)
+@EventBusSubscriber(Array(Side.CLIENT))
+class ClientProxy extends Proxy {
+  override def preInit(event: FMLPreInitializationEvent): Unit = {
+    super.preInit(event)
+    Stands.logger.info("Client proxy here!")
   }
 
   @SubscribeEvent
   def registerModels(event: ModelRegistryEvent): Unit = {
-    logger.debug("Registering item models.")
-    ITEMS.foreach((item: Item) => {
+    Stands.logger.info("Registering item models.")
+    Stands.ITEMS.foreach((item: Item) => {
       val registeredItem = GameRegistry.findRegistry(classOf[Item]).getValue(item.getRegistryName)
       ModelLoader.setCustomModelResourceLocation(
         registeredItem,
