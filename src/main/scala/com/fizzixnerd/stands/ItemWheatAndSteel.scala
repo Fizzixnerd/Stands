@@ -2,7 +2,7 @@ package com.fizzixnerd.stands
 
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
-import net.minecraft.item.{Item, ItemStack}
+import net.minecraft.item.{Item, ItemHoe, ItemSeeds, ItemStack}
 import net.minecraft.util.{EnumActionResult, EnumFacing, EnumHand, ResourceLocation}
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
@@ -24,18 +24,27 @@ object ItemWheatAndSteel extends Item {
                 hitX: Float,
                 hitY: Float,
                 hitZ: Float): EnumActionResult = {
-    if (side == EnumFacing.UP && world.isAirBlock(pos.up)) {
-      val blockState = world.getBlockState(pos)
-      val block = blockState.getBlock
-      val wheatSeeds = GameRegistry
-        .findRegistry(classOf[Item])
-        .getValue(new ResourceLocation("minecraft:wheat_seeds"))
-        .asInstanceOf[Item with IPlantable]
-      val canGrow = block.canSustainPlant(blockState, world, pos, EnumFacing.UP, wheatSeeds)
-      if (canGrow) {
-        world.setBlockState(pos.up, wheatSeeds.getPlant(world, pos))
-        player.getHeldItem(hand).damageItem(1, player)
-        return EnumActionResult.SUCCESS
+    val itemStack = player.getHeldItem(hand)
+    if (!player.canPlayerEdit(pos.offset(side), side, itemStack)) {
+      return EnumActionResult.FAIL
+    } else {
+      // Create a virtual hoe to till the ground first.
+      val virtualHoe = new ItemHoe(Item.ToolMaterial.IRON)
+      virtualHoe.onItemUse(player, world, pos, hand, side, hitX, hitY, hitZ)
+      // now plant a seed.
+      if (side == EnumFacing.UP && world.isAirBlock(pos.up)) {
+        val blockState = world.getBlockState(pos)
+        val block = blockState.getBlock
+        val wheatSeeds = GameRegistry
+          .findRegistry(classOf[Item])
+          .getValue(new ResourceLocation("minecraft:wheat_seeds"))
+          .asInstanceOf[Item with IPlantable]
+        val canGrow = block.canSustainPlant(blockState, world, pos, EnumFacing.UP, wheatSeeds)
+        if (canGrow) {
+          world.setBlockState(pos.up, wheatSeeds.getPlant(world, pos))
+          itemStack.damageItem(1, player)
+          return EnumActionResult.SUCCESS
+        }
       }
     }
     EnumActionResult.FAIL
