@@ -2,11 +2,10 @@ package com.fizzixnerd.stands
 
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
-import net.minecraft.item.{Item, ItemHoe, ItemSeeds, ItemStack}
+import net.minecraft.item.{Item, ItemHoe}
 import net.minecraft.util.{EnumActionResult, EnumFacing, EnumHand, ResourceLocation}
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import net.minecraftforge.common.IPlantable
 import net.minecraftforge.fml.common.registry.GameRegistry
 
 object ItemWheatAndSteel extends Item {
@@ -14,6 +13,7 @@ object ItemWheatAndSteel extends Item {
   maxStackSize = 1
   setMaxDamage(64)
   setCreativeTab(CreativeTabs.TOOLS)
+  private val virtualSeeds = GameRegistry.findRegistry(classOf[Item]).getValue(new ResourceLocation(("minecraft:wheat_seeds")))
 
   override
   def onItemUse(player: EntityPlayer,
@@ -26,27 +26,21 @@ object ItemWheatAndSteel extends Item {
                 hitZ: Float): EnumActionResult = {
     val itemStack = player.getHeldItem(hand)
     if (!player.canPlayerEdit(pos.offset(side), side, itemStack)) {
-      return EnumActionResult.FAIL
+      EnumActionResult.FAIL
     } else {
       // Create a virtual hoe to till the ground first.
       val virtualHoe = new ItemHoe(Item.ToolMaterial.IRON)
-      virtualHoe.onItemUse(player, world, pos, hand, side, hitX, hitY, hitZ)
-      // now plant a seed.
-      if (side == EnumFacing.UP && world.isAirBlock(pos.up)) {
-        val blockState = world.getBlockState(pos)
-        val block = blockState.getBlock
-        val wheatSeeds = GameRegistry
-          .findRegistry(classOf[Item])
-          .getValue(new ResourceLocation("minecraft:wheat_seeds"))
-          .asInstanceOf[Item with IPlantable]
-        val canGrow = block.canSustainPlant(blockState, world, pos, EnumFacing.UP, wheatSeeds)
-        if (canGrow) {
-          world.setBlockState(pos.up, wheatSeeds.getPlant(world, pos))
+      player.
+      val success = virtualHoe.onItemUse(player, world, pos, hand, side, hitX, hitY, hitZ)
+      if (success == EnumActionResult.SUCCESS) {
+        val success = virtualSeeds.onItemUse(player, world, pos, hand, side, hitX, hitY, hitZ)
+        if (success == EnumActionResult.SUCCESS) {
           itemStack.damageItem(1, player)
-          return EnumActionResult.SUCCESS
         }
+        success
+      } else {
+        success
       }
     }
-    EnumActionResult.FAIL
   }
 }
