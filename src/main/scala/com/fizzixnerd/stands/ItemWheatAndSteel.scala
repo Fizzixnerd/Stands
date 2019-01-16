@@ -7,7 +7,6 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.{EnumActionResult, EnumFacing, EnumHand, ResourceLocation}
 import net.minecraft.world.World
 import net.minecraftforge.fml.common.registry.GameRegistry
-import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder
 
 class ItemWheatAndSteel extends Item {
 
