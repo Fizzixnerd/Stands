@@ -7,7 +7,6 @@ import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.{Blocks, SoundEvents}
 import net.minecraft.item.{Item, ItemStack}
-import net.minecraft.util
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util._
 import net.minecraft.world.World
