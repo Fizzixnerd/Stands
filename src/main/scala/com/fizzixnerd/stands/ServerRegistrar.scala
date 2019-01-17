@@ -7,8 +7,4 @@ import net.minecraftforge.fml.relauncher.Side
 
 @EventBusSubscriber(Array(Side.SERVER))
 object ServerRegistrar {
-  @SubscribeEvent
-  def onPickup(event: EntityItemPickupEvent): Unit = {
-    Stands.logger.info("Server fired on EntityItemPickupEvent")
-  }
 }

@@ -24,9 +24,4 @@ object ClientRegistrar {
       )
     })
   }
-
-  @SubscribeEvent
-  def onPickup(event: EntityItemPickupEvent): Unit = {
-    Stands.logger.info("Client fired on EntityItemPickupEvent")
-  }
 }
