@@ -79,6 +79,8 @@ class ItemWheatAndSteel extends Item {
           case DirtType.COARSE_DIRT =>
             setBlock(itemStack, player, world, pos, Blocks.DIRT.getDefaultState.withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT))
             return EnumActionResult.SUCCESS
+          case DirtType.PODZOL =>
+            return EnumActionResult.PASS
         }
       }
       EnumActionResult.PASS
