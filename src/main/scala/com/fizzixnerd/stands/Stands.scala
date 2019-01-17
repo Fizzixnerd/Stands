@@ -2,6 +2,7 @@ package com.fizzixnerd.stands
 
 import net.minecraft.block.Block
 import net.minecraft.item.Item
+import net.minecraft.util.{ResourceLocation, SoundEvent}
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.{EventBusSubscriber, EventHandler}
@@ -17,7 +18,12 @@ object Stands {
   val blockCool = new BlockCool
 
   val BLOCKS = Array(blockCool)
-  val ITEMS =  Array(blockCool.itemBlock, new ItemWheatAndSteel)
+  val ITEMS =  Array(blockCool.itemBlock, new ItemWheatAndSteel, new ItemTimeStop)
+
+  val soundTimeStop = new SoundEvent(new ResourceLocation("stands", "time_stop_sound"))
+  soundTimeStop.setRegistryName("time_stop_sound")
+
+  val SOUNDS = Array(soundTimeStop)
 
   @EventHandler
   def preInit(event: FMLPreInitializationEvent) {

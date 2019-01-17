@@ -1,0 +1,7 @@
+{
+  "time_stop_sound": {
+    "category": "neutral",
+    "subtitle": "stands.subtitle.time_stop",
+    "sounds": [ "stands:time_stop_sound" ]
+  }
+}
