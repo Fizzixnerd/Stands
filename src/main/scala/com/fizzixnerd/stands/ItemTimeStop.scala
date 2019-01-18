@@ -1,8 +1,10 @@
 package com.fizzixnerd.stands
 
+import net.minecraft.client.Minecraft
 import net.minecraft.creativetab.CreativeTabs
+import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.player.EntityPlayer
-import net.minecraft.item.Item
+import net.minecraft.item.{Item, ItemStack}
 import net.minecraft.util._
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
@@ -26,7 +28,6 @@ class ItemTimeStop extends Item {
                 hitY: Float,
                 hitZ: Float): EnumActionResult = {
     world.playSound(player, pos, Stands.soundTimeStop, SoundCategory.NEUTRAL, 1.0F, 1.0F)
-
     for (_ <- 1 to 50000) {
       val randX = Random.nextDouble()
       val randZ = Random.nextDouble()
@@ -39,5 +40,16 @@ class ItemTimeStop extends Item {
       world.spawnParticle(EnumParticleTypes.PORTAL, d0, d1, d2, 20.0 * (if (randPlusX) randX else -randX), 1.0, 20.0 * (if (randPlusZ) randZ else -randZ))
     }
     EnumActionResult.SUCCESS
+  }
+
+  override
+  def itemInteractionForEntity(stack: ItemStack, playerIn: EntityPlayer, target: EntityLivingBase, hand: EnumHand): Boolean = {
+    super.itemInteractionForEntity(stack, playerIn, target, hand)
+    if (target.updateBlocked) {
+
+      target.updateBlocked = false
+    } else
+      target.updateBlocked = true
+    true
   }
 }
