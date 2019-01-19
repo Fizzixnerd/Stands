@@ -18,16 +18,7 @@ class ItemTimeStop extends Item {
   maxStackSize = 1
   setCreativeTab(CreativeTabs.TOOLS)
 
-  override
-  def onItemUse(player: EntityPlayer,
-                world: World,
-                pos: BlockPos,
-                hand: EnumHand,
-                side: EnumFacing,
-                hitX: Float,
-                hitY: Float,
-                hitZ: Float): EnumActionResult = {
-    world.playSound(player, pos, Stands.soundTimeStop, SoundCategory.NEUTRAL, 1.0F, 1.0F)
+  def spawnParticles(world: World, pos: BlockPos): Unit = {
     for (_ <- 1 to 50000) {
       val randX = Random.nextDouble()
       val randZ = Random.nextDouble()
@@ -39,17 +30,20 @@ class ItemTimeStop extends Item {
       val d2 = pos.getZ + 20.0 * (if (randPlusZ) randZ else -randZ)
       world.spawnParticle(EnumParticleTypes.PORTAL, d0, d1, d2, 20.0 * (if (randPlusX) randX else -randX), 1.0, 20.0 * (if (randPlusZ) randZ else -randZ))
     }
-    EnumActionResult.SUCCESS
   }
 
   override
   def itemInteractionForEntity(stack: ItemStack, playerIn: EntityPlayer, target: EntityLivingBase, hand: EnumHand): Boolean = {
     super.itemInteractionForEntity(stack, playerIn, target, hand)
     if (target.updateBlocked) {
-
+      playerIn.playSound(Stands.soundUntimeStop, 1.0F, 1.0F)
       target.updateBlocked = false
-    } else
+      spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
+    } else {
       target.updateBlocked = true
+      playerIn.playSound(Stands.soundTimeStop, 1.0F, 1.0F)
+      spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
+    }
     true
   }
 }

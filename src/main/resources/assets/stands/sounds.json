@@ -3,5 +3,10 @@
     "category": "neutral",
     "subtitle": "stands.subtitle.time_stop",
     "sounds": [ "stands:time_stop_sound" ]
+  },
+  "untime_stop_sound": {
+    "category": "neutral",
+    "subtitle" : "stands.subtitle.untime_stop",
+    "sounds": [ "stands:untime_stop_sound" ]
   }
 }

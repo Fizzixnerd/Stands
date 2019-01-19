@@ -23,7 +23,10 @@ object Stands {
   val soundTimeStop = new SoundEvent(new ResourceLocation("stands", "time_stop_sound"))
   soundTimeStop.setRegistryName("time_stop_sound")
 
-  val SOUNDS = Array(soundTimeStop)
+  val soundUntimeStop = new SoundEvent(new ResourceLocation("stands", "untime_stop_sound"))
+  soundUntimeStop.setRegistryName("untime_stop_sound")
+
+  val SOUNDS = Array(soundTimeStop, soundUntimeStop)
 
   @EventHandler
   def preInit(event: FMLPreInitializationEvent) {
