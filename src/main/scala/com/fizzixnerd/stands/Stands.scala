@@ -4,7 +4,7 @@ import net.minecraft.block.Block
 import net.minecraft.item.Item
 import net.minecraft.util.{ResourceLocation, SoundEvent}
 import net.minecraftforge.event.RegistryEvent
-import net.minecraftforge.fml.common.Mod
+import net.minecraftforge.fml.common.{Mod, SidedProxy}
 import net.minecraftforge.fml.common.Mod.{EventBusSubscriber, EventHandler}
 import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
@@ -28,17 +28,23 @@ object Stands {
 
   val SOUNDS = Array(soundTimeStop, soundUntimeStop)
 
+  @SidedProxy(clientSide = "com.fizzixnerd.stands.ClientProxy", serverSide = "com.fizzixnerd.stands.ServerProxy")
+  var proxy: IProxy = _
+
   @EventHandler
   def preInit(event: FMLPreInitializationEvent) {
     logger = event.getModLog
+    proxy.preInit(event)
   }
 
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = {
+    proxy.init(event)
   }
 
   @EventHandler
   def postInit(event: FMLPostInitializationEvent): Unit = {
+    proxy.postInit(event)
   }
 
   @SubscribeEvent
