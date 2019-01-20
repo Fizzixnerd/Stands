@@ -1,12 +1,13 @@
 package com.fizzixnerd.stands
 
 import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.entity.EntityLivingBase
+import net.minecraft.entity.{Entity, EntityLivingBase}
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.{Item, ItemStack}
 import net.minecraft.util._
-import net.minecraft.util.math.BlockPos
+import net.minecraft.util.math.{AxisAlignedBB, BlockPos}
 import net.minecraft.world.World
+import scala.collection.JavaConversions._
 
 import scala.util.Random
 
@@ -35,14 +36,29 @@ class ItemTimeStop extends Item {
   def itemInteractionForEntity(stack: ItemStack, playerIn: EntityPlayer, target: EntityLivingBase, hand: EnumHand): Boolean = {
     super.itemInteractionForEntity(stack, playerIn, target, hand)
     if (target.updateBlocked) {
-      playerIn.playSound(Stands.soundUntimeStop, 1.0F, 1.0F)
       target.updateBlocked = false
-      spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
+      playerIn.playSound(Stands.soundUntimeStop, 1.0F, 1.0F)
     } else {
       target.updateBlocked = true
       playerIn.playSound(Stands.soundTimeStop, 1.0F, 1.0F)
-      spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
     }
+    spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
     true
+  }
+
+  override
+  def onItemRightClick(worldIn: World, playerIn: EntityPlayer, handIn: EnumHand): ActionResult[ItemStack] = {
+    super.onItemRightClick(worldIn, playerIn, handIn)
+    val p = playerIn.getPositionVector
+    val range = 10
+    val entities = worldIn.getEntitiesWithinAABB(classOf[Entity], new AxisAlignedBB(p.x - range, p.y - range, p.z - range, p.x + range, p.y + range, p.z + range))
+    playerIn.playSound(Stands.soundTimeStop, 1.0F, 1.0F)
+    entities.foreach((entity: Entity) => {
+      if (entity != playerIn) {
+        entity.updateBlocked = !entity.updateBlocked
+      }
+    })
+    spawnParticles(playerIn.getEntityWorld, playerIn.getPosition)
+    ActionResult.newResult(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn))
   }
 }
