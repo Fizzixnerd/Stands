@@ -1,19 +1,15 @@
 package com.fizzixnerd.stands
 
 import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.entity.{Entity, EntityLivingBase}
 import net.minecraft.entity.player.EntityPlayer
+import net.minecraft.entity.{Entity, EntityLivingBase}
 import net.minecraft.item.{Item, ItemStack}
 import net.minecraft.util._
-import net.minecraft.util.math.{AxisAlignedBB, BlockPos}
+import net.minecraft.util.math.AxisAlignedBB
 import net.minecraft.world.{World, WorldServer}
 import net.minecraftforge.common.MinecraftForge
-import net.minecraftforge.fml.common.eventhandler.EventBus
-import net.minecraftforge.fml.common.gameevent.TickEvent
-import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent
 
 import scala.collection.JavaConversions._
-import scala.util.Random
 
 class ItemTimeStop extends Item {
 
@@ -44,7 +40,9 @@ class ItemTimeStop extends Item {
     if (!worldIn.isRemote) {
       val p = playerIn.getPositionVector
       val range = 10
-      val entities = worldIn.getEntitiesWithinAABB(classOf[Entity], new AxisAlignedBB(p.x - range, p.y - range, p.z - range, p.x + range, p.y + range, p.z + range)).filter(entity => entity != playerIn)
+      val entities = worldIn
+        .getEntitiesWithinAABB(classOf[Entity], new AxisAlignedBB(p.x - range, p.y - range, p.z - range, p.x + range, p.y + range, p.z + range))
+        .filter(entity => entity != playerIn)
       entities.foreach(entity => {
         entity.updateBlocked = true
       })

@@ -1,10 +1,8 @@
 package com.fizzixnerd.stands
 
-import java.util.concurrent.Callable
-
 import net.minecraft.client.Minecraft
-import net.minecraft.util.{EnumParticleTypes, SoundCategory}
 import net.minecraft.util.math.BlockPos
+import net.minecraft.util.{EnumParticleTypes, SoundCategory}
 import net.minecraft.world.World
 import net.minecraftforge.fml.common.network.simpleimpl.{IMessage, IMessageHandler, MessageContext}
 

@@ -1,11 +1,7 @@
 package com.fizzixnerd.stands
 
 import io.netty.buffer.ByteBuf
-import net.minecraft.entity.Entity
-import net.minecraft.util.math.BlockPos
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage
-
-import scala.collection.mutable
 
 // x y and z are the coordinates of the time-stopping player.
 class TimeStopMessage(var entityIds: Seq[Int], var updateBlocked: Boolean, var x: Double, var y: Double, var z: Double) extends IMessage {
