@@ -1,6 +1,5 @@
-package com.fizzixnerd.stands.abilities.timestop
+package com.fizzixnerd.stands
 
-import com.fizzixnerd.stands.Stands
 import net.minecraft.client.Minecraft
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.{EnumParticleTypes, SoundCategory}

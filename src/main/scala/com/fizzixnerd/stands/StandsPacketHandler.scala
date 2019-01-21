@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands.net
+package com.fizzixnerd.stands
 
 import net.minecraftforge.fml.common.network.NetworkRegistry
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper

@@ -1,6 +1,5 @@
-package com.fizzixnerd.stands.util
+package com.fizzixnerd.stands
 
-import com.fizzixnerd.stands.Stands
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.item.Item
 import net.minecraft.util.SoundEvent

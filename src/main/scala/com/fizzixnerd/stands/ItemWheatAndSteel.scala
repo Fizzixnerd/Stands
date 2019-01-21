@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands.items
+package com.fizzixnerd.stands
 
 import net.minecraft.block.BlockDirt
 import net.minecraft.block.BlockDirt.DirtType

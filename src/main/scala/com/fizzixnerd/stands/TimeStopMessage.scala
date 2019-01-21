@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands.abilities.timestop
+package com.fizzixnerd.stands
 
 import io.netty.buffer.ByteBuf
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage
