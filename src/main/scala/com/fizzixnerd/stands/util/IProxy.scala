@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands
+package com.fizzixnerd.stands.util
 
 import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}

@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands
+package com.fizzixnerd.stands.items
 
 import net.minecraft.block.BlockDirt
 import net.minecraft.block.BlockDirt.DirtType
@@ -7,8 +7,8 @@ import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.{Blocks, SoundEvents}
 import net.minecraft.item.{Item, ItemStack}
-import net.minecraft.util.math.BlockPos
 import net.minecraft.util._
+import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import net.minecraftforge.common.IPlantable
 import net.minecraftforge.event.ForgeEventFactory

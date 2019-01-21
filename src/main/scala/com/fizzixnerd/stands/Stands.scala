@@ -1,5 +1,8 @@
 package com.fizzixnerd.stands
 
+import com.fizzixnerd.stands.blocks.BlockCool
+import com.fizzixnerd.stands.items.{ItemTimeStop, ItemWheatAndSteel}
+import com.fizzixnerd.stands.util.IProxy
 import net.minecraft.block.Block
 import net.minecraft.item.Item
 import net.minecraft.util.{ResourceLocation, SoundEvent}

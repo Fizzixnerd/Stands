@@ -1,4 +1,4 @@
-package com.fizzixnerd.stands
+package com.fizzixnerd.stands.blocks
 
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material

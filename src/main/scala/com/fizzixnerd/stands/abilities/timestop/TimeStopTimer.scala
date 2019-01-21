@@ -1,5 +1,6 @@
-package com.fizzixnerd.stands
+package com.fizzixnerd.stands.abilities.timestop
 
+import com.fizzixnerd.stands.net.StandsPacketHandler
 import net.minecraft.world.WorldServer
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
