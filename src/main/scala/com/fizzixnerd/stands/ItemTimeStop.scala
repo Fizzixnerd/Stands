@@ -19,19 +19,6 @@ class ItemTimeStop extends Item {
   setCreativeTab(CreativeTabs.TOOLS)
 
   override
-  def itemInteractionForEntity(stack: ItemStack, playerIn: EntityPlayer, target: EntityLivingBase, hand: EnumHand): Boolean = {
-    super.itemInteractionForEntity(stack, playerIn, target, hand)
-    if (target.updateBlocked) {
-      target.updateBlocked = false
-      playerIn.playSound(Stands.soundUntimeStop, 1.0F, 1.0F)
-    } else {
-      target.updateBlocked = true
-      playerIn.playSound(Stands.soundTimeStop, 1.0F, 1.0F)
-    }
-    true
-  }
-
-  override
   def onItemRightClick(worldIn: World, playerIn: EntityPlayer, handIn: EnumHand): ActionResult[ItemStack] = {
     super.onItemRightClick(worldIn, playerIn, handIn)
 
@@ -39,16 +26,19 @@ class ItemTimeStop extends Item {
     // don't stop them on the client, the message will take care of that.
     if (!worldIn.isRemote) {
       val p = playerIn.getPositionVector
-      val range = 10
+      val range = 16
+      val AABB = new AxisAlignedBB(p.x - range, p.y - range, p.z - range, p.x + range, p.y + range, p.z + range)
       val entities = worldIn
-        .getEntitiesWithinAABB(classOf[Entity], new AxisAlignedBB(p.x - range, p.y - range, p.z - range, p.x + range, p.y + range, p.z + range))
+        .getEntitiesWithinAABB(classOf[Entity], AABB)
         .filter(entity => entity != playerIn)
       entities.foreach(entity => {
         entity.updateBlocked = true
       })
       val entityIds = entities.map(entity => entity.getEntityId)
-      StandsPacketHandler.INSTANCE.sendToAll(new TimeStopMessage(entityIds, true, playerIn.posX, playerIn.posY, playerIn.posZ))
-      MinecraftForge.EVENT_BUS.register(new TimeStopTimer(worldIn.asInstanceOf[WorldServer], entityIds, 100, p.x, p.y, p.z))
+      val message = new TimeStopMessage(entityIds, true, playerIn.posX, playerIn.posY, playerIn.posZ)
+      StandsPacketHandler.INSTANCE.sendToAll(message)
+      val timer = new TimeStopTimer(worldIn.asInstanceOf[WorldServer], entityIds, 100, p.x, p.y, p.z)
+      MinecraftForge.EVENT_BUS.register(timer)
     }
     ActionResult.newResult(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn))
   }
